@@ -1,0 +1,30 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sline.net.chat"
+    android:versionCode="1"
+    android:versionName="1.0"
+    >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="19"
+    />
+    <application android:label="@string/name"
+        android:icon="@drawable/icon"
+        android:theme="@style/AppTheme"
+        android:allowBackup="true"
+        >
+        <activity android:name=".Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Handle" />
+        <activity android:name=".activity.Loading"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+        />
+        <activity android:name=".activity.Chat"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+        />
+    </application>
+</manifest>
